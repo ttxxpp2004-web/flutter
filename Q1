@@ -1,0 +1,20 @@
+ import 'dart:io';
+
+void main() {
+  print("أدخل اسم الطالب:");
+  String? name = stdin.readLineSync();
+
+  print("أدخل درجة الاختبار:");
+  double grade = double.parse(stdin.readLineSync()!);
+
+  grade = grade + 5;
+
+  print("اسم الطالب: $name");
+  print("الدرجة بعد إضافة المكافأة: $grade");
+
+  if (grade >= 50) {
+    print("ناجح");
+  } else {
+    print("راسب");
+  }
+}

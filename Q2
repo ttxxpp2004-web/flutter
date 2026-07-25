@@ -1,0 +1,30 @@
+ void main() {
+  List<Map<String, dynamic>> students = [];
+
+  addStudent(students, "أحمد", 20, 75);
+  addStudent(students, "محمد", 21, 45);
+  addStudent(students, "علي", 19, 88);
+  addStudent(students, "خالد", 22, 65);
+
+  print("الطلاب الذين درجاتهم أكبر من 60:");
+
+  for (var student in students) {
+    if (student["grade"] > 60) {
+      print(
+          "الاسم: ${student["name"]}, العمر: ${student["age"]}, الدرجة: ${student["grade"]}");
+    }
+  }
+}
+
+void addStudent(
+  List<Map<String, dynamic>> students,
+  String name,
+  int age,
+  double grade,
+) {
+  students.add({
+    "name": name,
+    "age": age,
+    "grade": grade,
+  });
+}
